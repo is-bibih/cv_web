@@ -13,13 +13,12 @@
 
 .outerBox {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
 }
 
 .innerBox {
   padding: 2px 30px;
-  overflow: hidden;
   white-space: pre-wrap;
   display: flex;
   flex-direction: column;
@@ -36,9 +35,9 @@
 <template>
     <div class="card">
 	<div class="outerBox">
-		<img src="http://placekitten.com/g/200/200">
+		<img style="flex-wrap: cover; width: 100%;" :src="imgSrc">
 		<div class="innerBox">
-			<h4><b>{{ title }}</b></h4> 
+			<h4>{{ title }}</h4> 
 			<p>{{ text }}</p> 
 		</div>
 	</div>
@@ -47,7 +46,7 @@
 
 <script>
 	export default {
-		props: ['text', 'title'],
+		props: ['text', 'title', 'imgSrc'],
 		data: function () {
 			return {
 			}
