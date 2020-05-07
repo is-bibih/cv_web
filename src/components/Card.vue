@@ -11,27 +11,20 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.container {
+.outerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.innerBox {
   padding: 2px 30px;
-  max-height: 100%;
-  height: 100%;
   overflow: hidden;
   white-space: pre-wrap;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content:center;
-}
-
-.container > * {
-  /* these are the flex items */
-  flex: 1;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 * {
@@ -42,9 +35,9 @@
 
 <template>
     <div class="card">
-	<div class="clearfix">
-		<img src="http://placekitten.com/g/200/200" style="float:left;width=100px;height=100px">
-		<div class="container">
+	<div class="outerBox">
+		<img src="http://placekitten.com/g/200/200">
+		<div class="innerBox">
 			<h4><b>{{ title }}</b></h4> 
 			<p>{{ text }}</p> 
 		</div>
