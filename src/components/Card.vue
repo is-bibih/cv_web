@@ -12,9 +12,20 @@
 }
 
 .container {
-  padding: 2px 16px;
+  padding: 2px 30px;
+  max-height: 100%;
+  height: 100%;
   overflow: hidden;
   white-space: pre-wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+
+.container > * {
+  /* these are the flex items */
+  flex: 1;
 }
 
 .clearfix::after {
