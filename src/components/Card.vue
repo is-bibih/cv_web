@@ -13,7 +13,6 @@
 
 .outerBox {
   display: flex;
-  align-items: stretch;
   justify-content: space-between;
 }
 
@@ -35,7 +34,7 @@
 <template>
     <div class="card">
 	<div class="outerBox">
-		<img style="flex-wrap: cover; width: 100%;" :src="imgSrc">
+		<img style="object-fit: cover; width: 100%;" :src="imgSrc">
 		<div class="innerBox">
 			<h4>{{ title }}</h4> 
 			<p>{{ text }}</p> 
