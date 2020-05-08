@@ -13,22 +13,21 @@
 
 .outerBox {
   display: flex;
+  size: 200%;
   justify-content: space-between;
   align-items: center;
+  min-height: 150px;
 }
 
 .innerBox {
   padding: 10px 30px;
   white-space: pre-wrap;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   min-width: 30%;
 }
 
 .vBar {
   border-left: 1px solid LightGrey;
-  min-height: 60px;
+  height: 60px;
 }
 
 * {
@@ -41,11 +40,11 @@
     <div class="card">
 	<div class="outerBox">
 		<div class="innerBox">
-			<p>{{ leftText }}</p> 
+			<span v-html="leftText"></span>
 		</div>
 		<div class="vBar"></div>
 		<div class="innerBox">
-			<p>{{ rightText }}</p> 
+			<span v-html="rightText"></span>
 		</div>
 	</div>
     </div>
