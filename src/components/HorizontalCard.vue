@@ -13,15 +13,22 @@
 
 .outerBox {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .innerBox {
-  padding: 2px 30px;
+  padding: 10px 30px;
   white-space: pre-wrap;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-grow: 1;
+  min-width: 30%;
+}
+
+.vBar {
+  border-left: 1px solid LightGrey;
+  min-height: 60px;
 }
 
 * {
@@ -33,10 +40,12 @@
 <template>
     <div class="card">
 	<div class="outerBox">
-		<img style="object-fit: cover;" :src="imgSrc">
 		<div class="innerBox">
-			<h4>{{ title }}</h4> 
-			<p>{{ text }}</p> 
+			<p>{{ leftText }}</p> 
+		</div>
+		<div class="vBar"></div>
+		<div class="innerBox">
+			<p>{{ rightText }}</p> 
 		</div>
 	</div>
     </div>
@@ -44,7 +53,7 @@
 
 <script>
 	export default {
-		props: ['text', 'title', 'imgSrc'],
+		props: ['leftText', 'rightText'],
 		data: function () {
 			return {
 			}
