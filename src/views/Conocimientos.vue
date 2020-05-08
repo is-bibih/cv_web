@@ -6,6 +6,7 @@
 			v-bind:key="index"
 			v-bind:title="item.titulo"
 			v-bind:text="item.texto"
+			imgSrc="http://placekitten.com/g/200/200"
 		></card>
 	</div>
 </template>
